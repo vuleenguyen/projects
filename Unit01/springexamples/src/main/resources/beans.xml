@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<context:annotation-config></context:annotation-config>
+	
+	<!-- This bean for normal case -->
+	<!-- <bean id="helloJavaClazz" class="edu.java.spring.HelloClazz"> -->
+		<!-- <property name="message" value="Hello Bean Inheritance!"></property> -->
+		<!-- <constructor-arg type="int" value="5"></constructor-arg> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="helloWorld" class="edu.java.spring.HelloWorld" parent="sampleTemplate"></bean> -->
+
+	<!-- <bean id="helloWorld" class="edu.java.spring.HelloWorld"> -->
+		<!-- <constructor-arg index="0" value="Do My Duyen"></constructor-arg> -->
+		<!-- <constructor-arg ref="helloJavaClazz"></constructor-arg> -->
+	<!-- </bean> -->
+
+<!-- 	<bean id="helloWorld" class="edu.java.spring.HelloWorld"> -->
+<!-- 		<property name="helloClazz"> -->
+<!-- 			<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz"> -->
+<!-- 				<property name="message" value="Hello Class Instance is Inner Bean"></property> -->
+<!-- 			</bean> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz"> -->
+<!-- 		<property name="clazzes"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="jee01"/> -->
+<!-- 				<null/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+	
+	<!-- After use autowiring -->
+	<!-- Autowire byName -->
+<!-- 	<bean id="helloWorld" class="edu.java.spring.HelloWorld" autowire="byName"> -->
+<!-- 	</bean> -->
+	
+	<!-- Autowire byType -->
+<!-- 	<bean id="helloWorld" class="edu.java.spring.HelloWorld" autowire="byType"> -->
+<!-- 		<property name="message" value="Hello Annotation based Configuration"></property> -->
+<!-- 	</bean> -->
+
+	<!-- <bean id="helloJavaClazz2" class="edu.java.spring.HelloClazz" init-method="initMessage"> -->
+	<!-- <constructor-arg ref="helloJavaClazz"></constructor-arg> -->
+	<!-- </bean> -->
+
+	<!-- <bean class="edu.java.spring.InitSampleBean" /> -->
+
+	<!-- This bean for init method case -->
+	<!-- <bean id="helloJavaClazz" class="edu.java.spring.HelloClazz" init-method="initMessage"> -->
+	<!-- <property name="message" value="Welcome to Java Clazz"></property> -->
+	<!-- </bean> -->
+
+	<!-- This bean for singleton scope, stateless design -->
+	<!-- <bean id="helloJavaClazz" class="edu.java.spring.HelloClazz" scope="singleton"> -->
+	<!-- <property name="message" value="Welcome to Java Clazz"></property> -->
+	<!-- </bean> -->
+
+	<!-- This bean for prototype scope, stateful design -->
+	<!-- <bean id="helloJavaClazz" class="edu.java.spring.HelloClazz" scope="prototype"> -->
+	<!-- <property name="message" value="Welcome to Java Clazz"></property> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="helloJavaClazz" class="edu.java.spring.HelloClazz" destroy-method="release"> -->
+	<!-- <property name="message" value="Welcome to Java Clazz"></property> -->
+	<!-- </bean> -->
+	<bean id="jee01" class="edu.java.spring.JavaClazz">
+		<property name="students">
+			<map>
+				<entry key="Nguyen Van A" value="23"></entry>
+				<entry key="Tran Thi B" value="18"></entry>
+				<entry key="Le Thi C" value="27"></entry>
+				<entry key="Hoang Van D" value="34"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="sampleTemplate" abstract="true">
+		<property name="message" value="Template say Hello!"></property>
+	</bean>
+	
+	<!-- Remove Autowire -->
+	<bean id="helloWorld" class="edu.java.spring.HelloWorld">
+		<property name="message" value="Hello Annotation based Configuration"></property>
+	</bean>
+	
+	<bean id="helloClazz" class="edu.java.spring.HelloClazz">
+		<property name="message" value="Hello Class Instance is Inner Bean"></property>
+	</bean>
+	
+	<bean id="helloJavaClazz2" class="edu.java.spring.HelloClazz">
+		<property name="message" value="Hello Bean Inheritance"></property>
+	</bean>
+	
+	<bean id="startEventHandler" class="edu.java.spring.ContextStartEventHandler"></bean>
+	
+	<bean id="stopEventHandler" class="edu.java.spring.ContextStopEventHandler"></bean>
+</beans>
