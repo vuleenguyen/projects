@@ -2,6 +2,8 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <tiles:insertDefinition name="template">
 	<tiles:putAttribute name="body">
-		<h2>${message}</h2>
+		<div class="container">
+			<h2>${message}</h2>
+		</div>
 	</tiles:putAttribute>
 </tiles:insertDefinition>
