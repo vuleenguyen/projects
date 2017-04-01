@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @ImportResource("classpath:config.xml")
-public class SpringUnit7Application {
+public class SpringUnit8Application {
 	public static void main(String[] args) {
-		ConfigurableApplicationContext ctx = SpringApplication.run(SpringUnit7Application.class, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(SpringUnit8Application.class, args);
 		ctx.start();
 	}
 }
