@@ -1,0 +1,91 @@
+body {
+	background-image: url("../image/background.jpg");
+	height: 650px;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: cursive;
+	font-weight: 700;
+	color: #fff;
+	line-height: 65px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 50px;
+	font-family: cursive;
+	font-weight: 500;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+}
+
+.form-control {
+	width: 40%;
+}
+
+table tr {
+	color: white;
+}
+
+.detail {
+	font-weight: bold;
+	color: white;
+}
+
+label {
+	color: #9EC12F;
+}
+
+.error {
+	color: red; 
+	font-weight: bold;
+}
+
+.success {
+	color: green; 
+	font-weight: bold;
+}
+
+.uiButton {
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 2px 6px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.uiButtonConfirm {
+    background-color: #4267b2;
+    border-color: #29487d;
+}
+
+.uiButtonText, .uiButton input {
+    background: none;
+    border: 0;
+    color: #4b4f56;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.uiButtonConfirm input {
+	color: #fff;
+}
