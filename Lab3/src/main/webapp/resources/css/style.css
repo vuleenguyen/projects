@@ -1,0 +1,27 @@
+#insertAccount {
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+#insertAccount form {
+	width: 60%;
+    margin: auto;
+}
+
+#detail {
+	margin-top: 30px;
+}
+
+.form-group span {
+	color: green;
+}
+
+#detail h2 {
+	color: red;
+}
+
+#processMoney {
+ 	width: 60%;
+ 	margin-left: 20px;
+}
